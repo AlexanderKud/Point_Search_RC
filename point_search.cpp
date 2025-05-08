@@ -65,9 +65,9 @@ vector<uint64_t> break_down_to_pow10(uint64_t num) {
 }
 
 auto main() -> int {
-	Ec ec; InitEc();
+    Ec ec; InitEc();
 
-	EcInt pk; pk.Set(1);
+    EcInt pk; pk.Set(1);
     uint64_t mult = 2;
     vector<EcInt> S_table;
     for (int i = 0; i < 256; i++)
