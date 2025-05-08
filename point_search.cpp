@@ -178,8 +178,8 @@ auto main() -> int {
                 privkey.Mul_u64(privkey, mult);
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
-                	char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    char privKey[100];
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
@@ -230,7 +230,7 @@ auto main() -> int {
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
                     char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
@@ -314,7 +314,7 @@ auto main() -> int {
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
                     char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
@@ -365,7 +365,7 @@ auto main() -> int {
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
                     char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
