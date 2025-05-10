@@ -155,9 +155,8 @@ int main() {
         EcPoint P = puzzle_point;
         filter bf(n_elements, error);
         print_time(); cout << "Creating BloomFile1" << '\n';
-        string cpub;
         for (int i = 0; i < int(n_elements); i++) {
-             bf.insert(ec.GetPublicKeyHex(P));
+            bf.insert(ec.GetPublicKeyHex(P));
             P = ec.AddPoints(P, g_G);
         }
         print_time(); cout << "Writing BloomFile1 to bloom1.bf" << '\n';
