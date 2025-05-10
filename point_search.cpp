@@ -65,9 +65,9 @@ vector<uint64_t> break_down_to_pow10(uint64_t num) {
 }
 
 auto main() -> int {
-	Ec ec; InitEc();
+    Ec ec; InitEc();
 
-	EcInt pk; pk.Set(1);
+    EcInt pk; pk.Set(1);
     uint64_t mult = 2;
     vector<EcInt> S_table;
     for (int i = 0; i < 256; i++)
@@ -178,8 +178,8 @@ auto main() -> int {
                 privkey.Mul_u64(privkey, mult);
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
-                	char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    char privKey[100];
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
@@ -230,7 +230,7 @@ auto main() -> int {
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
                     char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
@@ -314,7 +314,7 @@ auto main() -> int {
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
                     char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
@@ -365,7 +365,7 @@ auto main() -> int {
                 calc_point = ec.MultiplyG(privkey);
                 if (ec.GetPublicKeyHex(calc_point) == search_pub) {
                     char privKey[100];
-                	privkey.GetHexStr(privKey);
+                    privkey.GetHexStr(privKey);
                     print_time(); cout << "Privatekey: " << privKey << endl;
                     ofstream outFile;
                     outFile.open("found.txt", ios::app);
