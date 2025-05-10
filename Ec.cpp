@@ -163,14 +163,14 @@ EcPoint Ec::AddPoints(EcPoint& pnt1, EcPoint& pnt2)
 
 EcPoint Ec::SubtractPoints(EcPoint& pnt1, EcPoint& pnt2) 
 {
-     EcPoint res, neg;
-     neg = pnt2;
-     EcInt negY;
-     negY.Assign(g_P);
-     negY.Sub(pnt2.y);
-     neg.y.Assign(negY);
-     res = AddPoints(pnt1, neg);
-     return res;
+        EcPoint res, neg;
+        neg = pnt2;
+        EcInt negY;
+        negY.Assign(g_P);
+        negY.Sub(pnt2.y);
+        neg.y.Assign(negY);
+        res = AddPoints(pnt1, neg);
+        return res;
 }
 
 // https://en.wikipedia.org/wiki/Elliptic_curve_point_multiplication#Point_doubling
@@ -268,25 +268,25 @@ EcPoint Ec::DivPointBy2(EcPoint &pnt)
 {
 	EcPoint res;
 	EcInt d_05;
-     d_05.SetHexStr("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A1");
-     res = Ec::MultiplyP(pnt, d_05);
+        d_05.SetHexStr("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A1");
+        res = Ec::MultiplyP(pnt, d_05);
 	return res;
 }
 
 std::string Ec::GetPublicKeyHex(EcPoint& pnt) {
 	std::string prefix;
-     bool parity = pnt.y.IsEven();
-     if (parity) prefix = "02";
-     else prefix = "03";
-     char XC[100];
+        bool parity = pnt.y.IsEven();
+        if (parity) prefix = "02";
+        else prefix = "03";
+        char XC[100];
 	pnt.x.GetHexStr(XC);
 	return prefix + XC;
 }
 
 EcPoint Ec::ParsePublicKeyHex(std::string pubkey) {
-     EcPoint ret;
-     ret.SetHexStr(pubkey.data());
-     return ret;
+        EcPoint ret;
+        ret.SetHexStr(pubkey.data());
+        return ret;
 }
 /*
 EcPoint Ec::MultiplyG_Fast(EcInt& k)
