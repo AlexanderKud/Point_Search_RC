@@ -25,6 +25,6 @@ Requires C++ Boost Library to be installed. <a href="https://www.boost.org">http
 [23:56:40] Search in progress...
 [23:57:12] BloomFilter Hit bloom2.bf (Odd Point) [Lower Range Half]
 [23:57:12] Privatekey: 000000000000000000000000000000000000000000000000000ad89e2c8e65c3
-[23:57:12] Elapsed time: (0)hours (0)minutes (32)seconds]
+[23:57:12] Elapsed time: (0)hours (0)minutes (32)seconds
 
 </pre>
